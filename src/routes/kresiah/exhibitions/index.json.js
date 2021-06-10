@@ -9,7 +9,7 @@ export const get = async (request) => {
   //   }
 
   //const response = await getJSON(request, `tutor/v1/quiz-question-answer/11/`);
-  const response = await api(request, `/wp/v2/exhibition`);
+  const response = await api(request, `wp/v2/exhibition`);
   console.log(response);
   if (response.status === 404) {
     console.log("404 pano");

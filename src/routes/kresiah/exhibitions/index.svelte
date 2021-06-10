@@ -1,22 +1,26 @@
 <script context="module">
   export const load = async ({ fetch }) => {
-    const res = await fetch("/kresiah/exhibitions.json");
+    try {
+      const res = await fetch("/kresiah/exhibitions.json");
 
-    console.log(res);
-    if (res.ok) {
-      const jsonData = await res.json();
-      const kresiah = await jsonData;
+      console.log(res);
+      if (res.ok) {
+        const jsonData = await res.json();
+        const kresiah = await jsonData;
+
+        return {
+          props: { kresiah },
+        };
+      }
+
+      //const { message } = await res.json();
 
       return {
-        props: { kresiah },
+        // error: new Error(message),
       };
+    } catch (error) {
+      console.error(error);
     }
-
-    //const { message } = await res.json();
-
-    return {
-     // error: new Error(message),
-    };
   };
 </script>
 
