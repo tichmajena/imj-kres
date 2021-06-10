@@ -1,5 +1,5 @@
 <script>
-  import Exhibition from "./Exhibitions.svelte";
+  import Exhibition from "./exhibitions/index.svelte";
   import Gallery from "./Gallery.svelte";
   import Abt from "./About.svelte";
   import Contact from "./Contact.svelte";

@@ -30,9 +30,9 @@
           </li>
           <li
             class="py-8 px-4"
-            class:active={$page.path === "/kresiah/Exhibitions"}
+            class:active={$page.path === "/kresiah/exhibitions"}
           >
-            <a sveltekit:prefetch href="/kresiah/Exhibitions">EXHIBITIONS</a>
+            <a sveltekit:prefetch href="/kresiah/exhibitions">EXHIBITIONS</a>
           </li>
           <li
             class="py-8 px-4"
