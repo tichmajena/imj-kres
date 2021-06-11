@@ -2,14 +2,13 @@
   export const load = async ({ fetch }) => {
     try {
       const res = await fetch("/kresiah/exhibitions.json");
-
       console.log(res);
       if (res.ok) {
-        const jsonData = await res.json();
-        const kresiah = await jsonData;
+        const exhibitionData = await res.json();
+        const exhibitions = await exhibitionData;
 
         return {
-          props: { kresiah },
+          props: { exhibitions },
         };
       }
 
@@ -26,9 +25,20 @@
 
 <script>
   import Animate from "$lib/Animate.svelte";
+
+  export let exhibitions;
+  console.log(exhibitions);
 </script>
 
 <Animate>
+  {#each exhibitions as exhibition}
+      <div>
+    <h2>
+      {exhibition}
+    </h2>
+  </div>
+  {/each}
+
   <section class="w-full md:flex   ">
     <div
       class="text-gray-300 lg:text-9xl md:text-7xl  text-5xl font-bold  pt-6 "
