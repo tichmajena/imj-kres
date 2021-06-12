@@ -6,20 +6,30 @@
   <div class="corner" />
 
   <nav class="absolute right-0 logo w-12">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="h-6 w-6 relative text-white"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
+    <a class="text-blue-100 hover:no-underline" href="/">
+      <li
+        class:active={$page.path === "/"}
+        class="block py-2 px-4 hover:bg-blue-600 hover:text-white rounded transition duration-200"
+      >
+        Home
+      </li></a
     >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M4 6h16M4 12h16M4 18h16"
-      />
-    </svg>
+    <a class="text-blue-100 hover:no-underline" href="/">
+      <li
+        class:active={$page.path === "/about"}
+        class="block py-2 px-4 hover:bg-blue-600 hover:text-white rounded transition duration-200"
+      >
+        About
+      </li></a
+    >
+    <a class="text-blue-100 hover:no-underline" href="/">
+      <li
+        class:active={$page.path === "/todos"}
+        class="block py-2 px-4 hover:bg-blue-600 hover:text-white rounded transition duration-200"
+      >
+        Todos
+      </li></a
+    >
   </nav>
 
   <div class="corner">
